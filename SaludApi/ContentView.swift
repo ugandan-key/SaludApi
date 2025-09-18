@@ -174,7 +174,80 @@ let conditionData: [String: ConditionInfo] = [
             ]
         ],
         sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/diarrhoeal-disease"
-    )
+    ),
+
+    "Infecciones respiratorias agudas": ConditionInfo(
+        title: "Infecciones respiratorias agudas",
+        imageName: "lungs.fill",
+        description: "Información relevante acerca de las infecciones respiratorias agudas.",
+        points: [
+            "Primer punto": [
+                "Son infecciones que afectan nariz, garganta, bronquios y pulmones, causadas por virus o bacterias.",
+                "Incluyen resfriado común, faringitis, bronquitis y neumonía."
+            ],
+            "Segundo punto": [
+                "Se transmiten por contacto directo con secreciones respiratorias o superficies contaminadas.",
+                "Los síntomas incluyen tos, fiebre, dolor de garganta, congestión nasal y dificultad para respirar."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Lávate las manos frecuentemente.",
+                "• Cubre tu boca y nariz al toser o estornudar.",
+                "• Evita el contacto cercano con personas enfermas.",
+                "• Mantén ventilados los espacios cerrados."
+            ]
+        ],
+        sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/influenza-(seasonal)"
+    ),
+
+    "Enfermedades infecciosas intestinales": ConditionInfo(
+        title: "Enfermedades infecciosas intestinales",
+        imageName: "stethoscope",
+        description: "Información relevante acerca de las enfermedades infecciosas intestinales.",
+        points: [
+            "Primer punto": [
+                "Son causadas por bacterias, virus o parásitos que afectan el tracto digestivo.",
+                "Incluyen salmonelosis, amebiasis, giardiasis y otras."
+            ],
+            "Segundo punto": [
+                "Se transmiten por consumo de agua o alimentos contaminados, o por contacto con personas infectadas.",
+                "Los síntomas incluyen diarrea, dolor abdominal, náuseas, vómito y fiebre."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Lava y desinfecta frutas y verduras.",
+                "• Consume agua potable.",
+                "• Mantén una buena higiene personal.",
+                "• Evita consumir alimentos en lugares poco higiénicos."
+            ]
+        ],
+        sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/diarrhoeal-disease"
+    ),
+
+    "Infección de vías urinarias": ConditionInfo(
+        title: "Infección de vías urinarias",
+        imageName: "drop.fill",
+        description: "Información relevante acerca de la infección de vías urinarias.",
+        points: [
+            "Primer punto": [
+                "Es una infección causada por bacterias (principalmente Escherichia coli) que afecta la vejiga, uretra o riñones.",
+                "Es más común en mujeres, pero puede afectar a cualquier persona."
+            ],
+            "Segundo punto": [
+                "Los síntomas incluyen dolor o ardor al orinar, necesidad frecuente de orinar, orina turbia o con mal olor, y dolor en la parte baja del abdomen.",
+                "En casos graves puede haber fiebre y dolor en la espalda."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Mantén una buena higiene genital.",
+                "• Bebe suficiente agua.",
+                "• No retengas la orina por mucho tiempo.",
+                "• Consulta al médico ante síntomas persistentes."
+            ]
+        ],
+        sources: "Fuente: CDC - Centers for Disease Control and Prevention https://www.cdc.gov/antibiotic-use/community/for-patients/common-illnesses/uti.html"
+    ),
+
 ]
 
 // Obtención de la información de la API
