@@ -1,22 +1,37 @@
+//
+//  PDFViewer.swift
+//  SaludApi
+//
+//  Created by Geovany Monroy Garcia on 20/3/25.
+//
+import SwiftUI
+import PDFKit
+
 struct PDFViewer: View {
-    let fileName: String
+    let urlString: String
 
     var body: some View {
-        PDFKitView(fileName: fileName)
-            .navigationTitle(fileName)
+        PDFKitView(urlString: urlString)
+            .navigationTitle("PDF viewer")
             .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 struct PDFKitView: UIViewRepresentable {
-    let fileName: String
+    let urlString: String
 
     func makeUIView(context: Context) -> PDFView {
         let pdfView = PDFView()
         pdfView.autoScales = true
 
-        if let url = Bundle.main.url(forResource: fileName, withExtension: nil) {
-            pdfView.document = PDFDocument(url: url)
+        if let url = URL(string: urlString) {
+            DispatchQueue.global(qos: .background).async {
+                if let pdfDocument = PDFDocument(url: url) {
+                    DispatchQueue.main.async {
+                        pdfView.document = pdfDocument
+                    }
+                }
+            }
         }
 
         return pdfView

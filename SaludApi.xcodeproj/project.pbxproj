@@ -6,7 +6,20 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6E99D0BA2CC5D68D007C282D /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E99D0B92CC5D68D007C282D /* WidgetKit.framework */; };
+		6E99D0BC2CC5D68D007C282D /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E99D0BB2CC5D68D007C282D /* SwiftUI.framework */; };
+		6E99D0CD2CC5D68E007C282D /* SaludApiWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 6E99D0B72CC5D68D007C282D /* SaludApiWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		6E99D0CB2CC5D68E007C282D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6EE6F7272CB0E72500E9E52D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6E99D0B62CC5D68D007C282D;
+			remoteInfo = SaludApiWidgetExtension;
+		};
 		6EE6F7402CB0E72600E9E52D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 6EE6F7272CB0E72500E9E52D /* Project object */;
@@ -23,15 +36,60 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6E99D0CE2CC5D68E007C282D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6E99D0CD2CC5D68E007C282D /* SaludApiWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		6E99D0B72CC5D68D007C282D /* SaludApiWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SaludApiWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E99D0B92CC5D68D007C282D /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		6E99D0BB2CC5D68D007C282D /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		6EE6F72F2CB0E72500E9E52D /* SaludApi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SaludApi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE6F73F2CB0E72600E9E52D /* SaludApiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaludApiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EE6F7492CB0E72600E9E52D /* SaludApiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SaludApiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		6E99D0D12CC5D68E007C282D /* Exceptions for "SaludApiWidget" folder in "SaludApiWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6E99D0B62CC5D68D007C282D /* SaludApiWidgetExtension */;
+		};
+		6EF0719C2CEFA28D003E8351 /* Exceptions for "SaludApi" folder in "SaludApi" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 6EE6F72E2CB0E72500E9E52D /* SaludApi */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		6E99D0BD2CC5D68D007C282D /* SaludApiWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6E99D0D12CC5D68E007C282D /* Exceptions for "SaludApiWidget" folder in "SaludApiWidgetExtension" target */,
+			);
+			path = SaludApiWidget;
+			sourceTree = "<group>";
+		};
 		6EE6F7312CB0E72500E9E52D /* SaludApi */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				6EF0719C2CEFA28D003E8351 /* Exceptions for "SaludApi" folder in "SaludApi" target */,
+			);
 			path = SaludApi;
 			sourceTree = "<group>";
 		};
@@ -48,6 +106,15 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		6E99D0B42CC5D68D007C282D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6E99D0BC2CC5D68D007C282D /* SwiftUI.framework in Frameworks */,
+				6E99D0BA2CC5D68D007C282D /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE6F72C2CB0E72500E9E52D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,12 +139,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6E99D0B82CC5D68D007C282D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6E99D0B92CC5D68D007C282D /* WidgetKit.framework */,
+				6E99D0BB2CC5D68D007C282D /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6EE6F7262CB0E72500E9E52D = {
 			isa = PBXGroup;
 			children = (
 				6EE6F7312CB0E72500E9E52D /* SaludApi */,
 				6EE6F7422CB0E72600E9E52D /* SaludApiTests */,
 				6EE6F74C2CB0E72600E9E52D /* SaludApiUITests */,
+				6E99D0BD2CC5D68D007C282D /* SaludApiWidget */,
+				6E99D0B82CC5D68D007C282D /* Frameworks */,
 				6EE6F7302CB0E72500E9E52D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +166,7 @@
 				6EE6F72F2CB0E72500E9E52D /* SaludApi.app */,
 				6EE6F73F2CB0E72600E9E52D /* SaludApiTests.xctest */,
 				6EE6F7492CB0E72600E9E52D /* SaludApiUITests.xctest */,
+				6E99D0B72CC5D68D007C282D /* SaludApiWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +174,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		6E99D0B62CC5D68D007C282D /* SaludApiWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6E99D0D22CC5D68E007C282D /* Build configuration list for PBXNativeTarget "SaludApiWidgetExtension" */;
+			buildPhases = (
+				6E99D0B32CC5D68D007C282D /* Sources */,
+				6E99D0B42CC5D68D007C282D /* Frameworks */,
+				6E99D0B52CC5D68D007C282D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				6E99D0BD2CC5D68D007C282D /* SaludApiWidget */,
+			);
+			name = SaludApiWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SaludApiWidgetExtension;
+			productReference = 6E99D0B72CC5D68D007C282D /* SaludApiWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		6EE6F72E2CB0E72500E9E52D /* SaludApi */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6EE6F7532CB0E72600E9E52D /* Build configuration list for PBXNativeTarget "SaludApi" */;
@@ -102,10 +203,12 @@
 				6EE6F72B2CB0E72500E9E52D /* Sources */,
 				6EE6F72C2CB0E72500E9E52D /* Frameworks */,
 				6EE6F72D2CB0E72500E9E52D /* Resources */,
+				6E99D0CE2CC5D68E007C282D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				6E99D0CC2CC5D68E007C282D /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				6EE6F7312CB0E72500E9E52D /* SaludApi */,
@@ -170,9 +273,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					6E99D0B62CC5D68D007C282D = {
+						CreatedOnToolsVersion = 16.0;
+					};
 					6EE6F72E2CB0E72500E9E52D = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -203,11 +309,19 @@
 				6EE6F72E2CB0E72500E9E52D /* SaludApi */,
 				6EE6F73E2CB0E72600E9E52D /* SaludApiTests */,
 				6EE6F7482CB0E72600E9E52D /* SaludApiUITests */,
+				6E99D0B62CC5D68D007C282D /* SaludApiWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		6E99D0B52CC5D68D007C282D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE6F72D2CB0E72500E9E52D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +346,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		6E99D0B32CC5D68D007C282D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EE6F72B2CB0E72500E9E52D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +377,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		6E99D0CC2CC5D68E007C282D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6E99D0B62CC5D68D007C282D /* SaludApiWidgetExtension */;
+			targetProxy = 6E99D0CB2CC5D68E007C282D /* PBXContainerItemProxy */;
+		};
 		6EE6F7412CB0E72600E9E52D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 6EE6F72E2CB0E72500E9E52D /* SaludApi */;
@@ -269,6 +395,62 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		6E99D0CF2CC5D68E007C282D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H7BH8K2QK4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaludApiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaludApiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AsclepInc.SaludApi.SaludApiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6E99D0D02CC5D68E007C282D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = H7BH8K2QK4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaludApiWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SaludApiWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = AsclepInc.SaludApi.SaludApiWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		6EE6F7512CB0E72600E9E52D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -396,13 +578,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SaludApi/Preview Content\"";
+				DEVELOPMENT_TEAM = H7BH8K2QK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaludApi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,13 +609,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SaludApi/Preview Content\"";
+				DEVELOPMENT_TEAM = H7BH8K2QK4;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SaludApi/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,6 +703,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		6E99D0D22CC5D68E007C282D /* Build configuration list for PBXNativeTarget "SaludApiWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6E99D0CF2CC5D68E007C282D /* Debug */,
+				6E99D0D02CC5D68E007C282D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		6EE6F72A2CB0E72500E9E52D /* Build configuration list for PBXProject "SaludApi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

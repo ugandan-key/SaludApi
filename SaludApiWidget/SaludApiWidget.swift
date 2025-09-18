@@ -45,12 +45,50 @@ struct SaludApiWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Favorite Emoji:")
-            Text(entry.configuration.favoriteEmoji)
+        Link(destination: URL(string: "saludapi://open")!) {
+            HStack {
+                VStack {
+                    Image(systemName: "drop.fill")
+                        .font(.system(size: 24))
+                        .foregroundColor(.red)
+                    Text("Lavado de\nmanos")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                }
+                Spacer()
+                
+                VStack {
+                    Image(systemName: "facemask")
+                        .font(.system(size: 24))
+                        .foregroundColor(.red)
+                    Text("Uso de\nCubrebocas")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                }
+                Spacer()
+                
+                VStack {
+                    Image(systemName: "person.2")
+                        .font(.system(size: 24))
+                        .foregroundColor(.red)
+                    Text("Mantener\ndistancia")
+                        .font(.footnote)
+                        .multilineTextAlignment(.center)
+                }
+                Spacer()
+                
+                VStack(alignment: .leading) {
+                    Text("I.V.U.")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Text("G.E.P.I.")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                    Text("COVID-19")
+                        .font(.subheadline)
+                        .fontWeight(.bold)
+                }
+            }
         }
     }
 }
@@ -62,7 +100,8 @@ struct SaludApiWidget: Widget {
         AppIntentConfiguration(kind: kind, intent: ConfigurationAppIntent.self, provider: Provider()) { entry in
             SaludApiWidgetEntryView(entry: entry)
                 .containerBackground(.fill.tertiary, for: .widget)
-        }
+        }.configurationDisplayName("SaludAPI Widget")
+            .description("Widget de SaludAPI")
     }
 }
 
@@ -80,7 +119,7 @@ extension ConfigurationAppIntent {
     }
 }
 
-#Preview(as: .systemSmall) {
+#Preview(as: .systemMedium) {
     SaludApiWidget()
 } timeline: {
     SimpleEntry(date: .now, configuration: .smiley)
