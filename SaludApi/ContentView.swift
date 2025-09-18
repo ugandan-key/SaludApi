@@ -81,7 +81,100 @@ let conditionData: [String: ConditionInfo] = [
         "Segundo punto": ["Si conoces a alguien con tos de más de un mes, puede tener tuberculosis. Es necesario que acuda a consulta para realizarse estudios y recibir tratamiento si padece esta enfermedad."],
         "Tercer punto": ["En las personas sanas, la infección no suele causar síntomas, porque el sistema inmunitario de la persona actúa para bloquear la bacteria.", "En las personas con tuberculosis, la infección puede causar síntomas, como tos, dolor de cabeza, dificultad para respirar y fiebre."]
     ], sources: "Fuente: IMSS - Instituto Mexicano del Seguro Social https://www.imss.gob.mx/salud-en-linea/tuberculosis-pulmonar"
-        )
+        ),
+    "Influenza": ConditionInfo(
+        title: "Influenza",
+        imageName: "list.bullet.clipboard",
+        description: "Información relevante acerca de la influenza.",
+        points: [
+            "Primer punto": [
+                "La influenza es una infección viral que afecta principalmente la nariz, la garganta, los bronquios y, ocasionalmente, los pulmones.",
+                "Se transmite fácilmente de persona a persona a través de gotitas respiratorias."
+            ],
+            "Segundo punto": [
+                "Los síntomas incluyen fiebre alta, dolor de cabeza, dolor muscular, tos seca, dolor de garganta y fatiga.",
+                "La mayoría de las personas se recuperan en una o dos semanas, pero puede causar complicaciones graves en grupos vulnerables."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Vacúnate anualmente contra la influenza.",
+                "• Lávate las manos frecuentemente.",
+                "• Evita el contacto cercano con personas enfermas.",
+                "• Cubre tu boca y nariz al toser o estornudar."
+            ]
+        ],
+        sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/influenza-(seasonal)"
+    ),
+
+    "COVID-19": ConditionInfo(
+        title: "COVID-19",
+        imageName: "list.bullet.clipboard",
+        description: "Información relevante acerca de la COVID-19.",
+        points: [
+            "Primer punto": [
+                "COVID-19 es una enfermedad causada por el coronavirus SARS-CoV-2.",
+                "Se transmite principalmente por contacto cercano y a través de gotitas respiratorias."
+            ],
+            "Segundo punto": [
+                "Los síntomas pueden variar desde leves (fiebre, tos, fatiga) hasta graves (dificultad para respirar, pérdida del gusto u olfato).",
+                "Algunas personas pueden ser asintomáticas."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Vacúnate contra la COVID-19.",
+                "• Usa cubrebocas en lugares cerrados o concurridos.",
+                "• Mantén la distancia física.",
+                "• Lávate las manos frecuentemente."
+            ]
+        ],
+        sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/coronavirus-disease-(covid-19)"
+    ),
+
+    "Varicela": ConditionInfo(
+        title: "Varicela",
+        imageName: "list.bullet.clipboard",
+        description: "Información relevante acerca de la varicela.",
+        points: [
+            "Primer punto": [
+                "La varicela es una enfermedad altamente contagiosa causada por el virus varicela-zóster.",
+                "Se caracteriza por fiebre y erupciones cutáneas con ampollas."
+            ],
+            "Segundo punto": [
+                "La transmisión ocurre por contacto directo con las lesiones o por vía aérea.",
+                "La mayoría de los casos son leves, pero puede ser grave en adultos y personas inmunodeprimidas."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Vacúnate contra la varicela.",
+                "• Evita el contacto con personas infectadas.",
+                "• Mantén una buena higiene personal."
+            ]
+        ],
+        sources: "Fuente: CDC - Centers for Disease Control and Prevention https://www.cdc.gov/chickenpox/about/index.html"
+    ),
+
+    "Enfermedad diarreica aguda": ConditionInfo(
+        title: "Enfermedad diarreica aguda",
+        imageName: "list.bullet.clipboard",
+        description: "Información relevante acerca de la enfermedad diarreica aguda.",
+        points: [
+            "Primer punto": [
+                "Las enfermedades diarreicas agudas son causadas por infecciones virales, bacterianas o parasitarias.",
+                "Se transmiten principalmente por el consumo de agua o alimentos contaminados."
+            ],
+            "Segundo punto": [
+                "Los síntomas incluyen evacuaciones líquidas frecuentes, dolor abdominal, fiebre y deshidratación.",
+                "Son una causa importante de morbilidad en niños menores de 5 años."
+            ],
+            "Tercer punto": [
+                "• Pasos que puedes tomar:",
+                "• Lava tus manos antes de comer y después de ir al baño.",
+                "• Consume agua potable.",
+                "• Lava y desinfecta frutas y verduras."
+            ]
+        ],
+        sources: "Fuente: OMS - Organización Mundial de la Salud https://www.who.int/es/news-room/fact-sheets/detail/diarrhoeal-disease"
+    )
 ]
 
 // Obtención de la información de la API
@@ -225,7 +318,8 @@ struct ContentView: View {
 
     // Get all available weeks from the API data
     var availableWeeks: [String] {
-        Array(Set(dataFetcher.diseaseData.map { $0.week })).sorted(by: >)
+        Array(Set(dataFetcher.diseaseData.map { $0.week }))
+            .sorted { (Int($0) ?? 0) > (Int($1) ?? 0) }
     }
 
     // Get sorted data for the selected week
